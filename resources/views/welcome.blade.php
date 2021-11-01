@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+@extends('layouts.layout')
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -14,10 +15,12 @@
             }
         </style>
     </head>
+    @section('title')
     <body class="antialiased">
+        <p>hello {{ $data }}</p>
     <?php
-        foreach ($posts as $post) {
-        echo $post->name;
-    }?>                
+    echo ('これはテストです');
+    ?>                
+
     </body>
 </html>

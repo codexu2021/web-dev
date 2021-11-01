@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostContoroller;
+use App\Http\Controllers\PostController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,10 @@ use App\Http\Controllers\PostContoroller;
 |
 */
 
-Route::get('/','App\Http\Controllers\PostController@post', function () {
-    return view('welcome');
-});
+Route::get(
+    '/',[PostController::class,'post']
+);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
