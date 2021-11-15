@@ -14,13 +14,13 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
-    </head>
-    @section('title')
+        @section('title')
     <body class="antialiased">
-        <p>hello {{ $data }}</p>
-    <?php
-    echo ('これはテストです');
-    ?>                
+        <p>hello {{ $user }}</p>
+      <?php
+        echo ('これはテストです');
+      ?>                
 
     </body>
 </html>
+    </head>
