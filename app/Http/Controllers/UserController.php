@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -14,7 +15,7 @@ class UserController extends Controller
      */
     public function showID($id)
     {
-        return view('user.profile', [
+        return view('user_profile', [
             'user' => User::findOrFail($id)
         ]);
     }

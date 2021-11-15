@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,14 @@ use App\Http\Controllers\PostController;
 Route::get(
     '/',[PostController::class,'post']
 );
+
+Route::get(
+    '/user/{id}',[UserController::class,'showID']
+);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
